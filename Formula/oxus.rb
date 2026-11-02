@@ -1,8 +1,8 @@
 class Oxus < Formula
   desc "MCP server that exposes macOS Spotlight search to MCP clients over stdio"
   homepage "https://github.com/csanfilippo/oxus"
-  url "https://github.com/csanfilippo/oxus/releases/download/v0.1.0/oxus-macos-arm64.zip"
-  sha256 "43a93dd85ad4c6c8fe6c793f429b2826d7b960a160aab1b7a4739e3497b054a7"
+  url "https://github.com/csanfilippo/oxus/releases/download/v0.2.0/oxus-macos-arm64.zip"
+  sha256 "1a7b407524471fb2b8103a7d327557f2ed03db0b8f2a9d17d66d9b694bea03c6"
   license "MIT"
 
   depends_on arch: :arm64
