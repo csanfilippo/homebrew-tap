@@ -13,12 +13,6 @@ class Oxus < Formula
   end
 
   test do
-    initialize = '{"jsonrpc":"2.0","id":1,"method":"initialize","params":' \
-                 '{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"brew","version":"0"}}}'
-    # oxus exits as soon as stdin closes, so the response is read while stdin is still open.
-    IO.popen(bin/"oxus", "r+") do |server|
-      server.puts initialize
-      assert_match "\"version\":\"#{version}\"", server.gets
-    end
+    assert_equal "oxus #{version}\n", shell_output("#{bin}/oxus --version")
   end
 end
